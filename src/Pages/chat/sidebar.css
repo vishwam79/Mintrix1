@@ -1,0 +1,73 @@
+/* Mobilenav.css */
+
+.mobilenav {
+    position: fixed;
+    background-color: #09090B;
+    opacity: 1; 
+  
+    gap: 20px;
+    backdrop-filter: blur(10px);
+    color: white;
+    height: 100vh;
+    width: 18rem; 
+    z-index: 30;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 0px;
+  }
+  
+  .mobilenav-content {
+    margin-top: 100px; 
+    justify-content: space-between;
+  }
+  
+  .mobilenav-a {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mobilenav-list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px; /* Equivalent to ml-10 */
+    gap: 0.625rem; /* Equivalent to gap-2 */
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .mobilenav-item {
+    color: #ffffff; /* Equivalent to text-zinc-300 */
+    text-transform: uppercase;
+    font-size: 16px; 
+    font-weight: 500;/* Equivalent to text-sm */
+    border-bottom: 1px solid #71717a; /* Equivalent to border-zinc-500 */
+    padding: 0.5rem 0; /* Equivalent to py-2 */
+  }
+  
+  .mobilenav-hover {
+    color: #d946ef; /* Equivalent to text-fuchsia-600 */
+    cursor: pointer;
+
+  }
+  
+  .mobilenav-button {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 3px;
+    
+    background: linear-gradient(135deg, #B852D7, #AE5BE9, #C65A94);
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    gap: 8px;
+    color:white;
+  }
+  
+  .mobilenav-icon {
+    display: flex;
+    align-items: center;
+  }
+  
