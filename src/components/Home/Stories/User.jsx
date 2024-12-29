@@ -4,8 +4,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ReactCardFlip from "react-card-flip";
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
-import './UseCase.css';
-
 
 const responsive = {
   desktop: {
@@ -28,21 +26,25 @@ const responsive = {
 const sliderImageUrl = [
   {
     url: "/usecase1.jpg",
+    urlback:"/usecase2.jpg",
     title: "TEACHERS",
     flip: "AI-Powered Solutions Tailored for Every Role in Your School.AI-Powered Solutions Tailored for Every Role in Your School.AI-Powered Solutions Tailored for Every Role in Your School.AI-Powered Solutions Tailored for Every Role in Your School.AI-Powered Solutions Tailored for Every Role in Your School.",
   },
   {
     url: "/usecase1.jpg",
     title: "STUDENTS",
+    urlback:"/usecase2.jpg",
     flip: "AI-Powered Solutions Tailored for Every Role in Your School.AI-Powered Solutions Tailored for Every Role in Your School.AI-Powered Solutions Tailored for Every Role in Your School.AI-Powered Solutions Tailored for Every Role in Your School.AI-Powered Solutions Tailored for Every Role in Your School.",
   },
   {
     url: "/usecase1.jpg",
+    urlback:"/usecase2.jpg",
     title: "STAFF",
     flip: "AI-Powered Solutions Tailored for Every Role in Your School.AI-Powered Solutions Tailored for Every Role in Your School.AI-Powered Solutions Tailored for Every Role in Your School.AI-Powered Solutions Tailored for Every Role in Your School.AI-Powered Solutions Tailored for Every Role in Your School.",
   },
   {
     url: "/usecase1.jpg",
+    urlback:"/usecase2.jpg",
     title: "PARENTS",
     flip: " AI-Powered Solutions Tailored for Every Role in Your School.AI-Powered Solutions Tailored for Every Role in Your School.AI-Powered Solutions Tailored for Every Role in Your School.AI-Powered Solutions Tailored for Every Role in Your School.",
   },
@@ -80,7 +82,7 @@ const Step = () => {
     <div className="max-w-[1280px] mx-auto relative mt-32 mb-10">
       <div className="my-12 flex justify-between items-center">
         <CustomLeftArrow onClick={() => carouselRef.current.previous()} />
-        <h2 className="text-3xl text-white font-semibold">Everyday Usecase</h2>
+        <h2 className="text-3xl text-white font-semibold">Users</h2>
         <CustomRightArrow onClick={() => carouselRef.current.next()} />
       </div>
 
@@ -104,7 +106,7 @@ const Step = () => {
             >
               {/* Front Side */}
               <div
-                onMouseEnter={() => hoverHandle(index)}
+                onMouseEnter={() => hoverHandle(index)} 
                 className="slider object-cover h-[440px] rounded-md flex justify-start items-center"
                 style={{ backgroundImage: `url(${imageUrl.url})` }}
               >
@@ -117,7 +119,7 @@ const Step = () => {
               <div
                 onMouseLeave={() => hoverHandle(index)}
                 className="slider object-cover h-[440px] rounded-md flex justify-start items-end"
-                style={{ backgroundImage: `url(${imageUrl.url})` }}
+                style={{ backgroundImage: `url(${imageUrl.urlback})` }}
               >
                 <h1 className="px-5 font-semibold text-white">
                   {imageUrl.flip} 

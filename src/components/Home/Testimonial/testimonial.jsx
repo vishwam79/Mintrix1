@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import "./testimonial.css";
+
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 
 const responsive = {
@@ -12,12 +12,12 @@ const responsive = {
     slidesToSlide: 1,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 768 },
+    breakpoint: { max: 1024, min: 600 },
     items: 2,
     slidesToSlide: 1,
   },
   mobile: {
-    breakpoint: { max: 767, min: 464 },
+    breakpoint: { max: 300, min: 300 },
     items: 1,
     slidesToSlide: 1,
   },
@@ -109,7 +109,7 @@ const Slider = () => {
           {sliderImageUrl.map((imageUrl, index) => {
             return (
               <div
-                className="slider  object-cover h-[440px] rounded-md flex justify-start items-end"
+                className="mx-[10px] py-[2rem] transform transition-transform hover:scale-110  object-cover h-[440px] rounded-md flex justify-start items-end"
                 key={index}
                 style={{ backgroundImage: `url(${imageUrl.url})` }}
               >

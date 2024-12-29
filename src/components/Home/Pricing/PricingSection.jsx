@@ -1,49 +1,79 @@
-import React from "react";
+import React from 'react';
+
+import { Check } from 'lucide-react';
 
 const PricingSection = () => {
+  const plans = [
+    {
+      title: 'Free',
+      price: '$0',
+      features: [
+        'Voice messages anywhere',
+        'Basic chat features',
+        'Group conversations',
+        'Mobile app access',
+      ],
+    },
+    {
+      title: 'Premium',
+      price: '$9.99',
+      features: [
+        'All Free features',
+        'Advanced voice messages',
+        'Priority support',
+        'Custom themes',
+        'Priority support',
+        'Custom themes'
+      ],
+      isPopular: true,
+    },
+    {
+      title: 'Business',
+      price: '$29.99',
+      features: [
+        'All Premium features',
+        'Admin controls',
+        'Analytics dashboard',
+        'API access',
+      ],
+    },
+  ];
+
   return (
-    <div className="bg-zinc-950 border-opacity-50  border-gray-700 border-[1px] text-white mt-40 mb-40 py-8 flex flex-col lg:flex-row p-10 justify-start item-start lg:justify-between max-w-[1280px] mx-auto rounded-xl shadow-lg h-full gap-20">
-      <div className="lg:w-3/4 lg:mb-0  ">
-        <h2 className="lg:text-5xl font-semibold md:text-6xl  sm:text-3xl text-white mb-10">
-          One Account for all AI needs
-        </h2>
-
-        <div className="justify-between items-center -mt-10 lg:flex md:flex sm:flex-1">
-          <div>
-            <ul className="list-decimal list-inside text-white font-normal text-[18px] leading-loose">
-              <li>The best AI tool to Research, Write & Summarize</li>
-              <li>20x higher limits than ChatGPT</li>
-              <li>Best alternative to Poe, Perplexity, ChatPDF, etc</li>
-              <li>Official partnerships with all top LLM providers</li>
-              <li>SOC2, GDPR, ISO compliant</li>
-            </ul>
-          </div>
-
-          <div>
-            <img
-              src="/aiimage.png"
-              alt="AI illustration"
-              className="hidden md:block lg:w-72 md:w-48 object-cover rounded-full lg:rounded-none -mt-20"
-            />
-          </div>
+    <div className="min-h-screen mt-20  md:py-40 py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-white mb-4">One Account for all AI needs</h2>
+          
         </div>
-      </div>
-
-      <div className="lg:w-1/4  flex flex-col items-center justify-between min-h-[300px]  border-white border-l-[1px] border-dashed  mt-10">
-        <div>
-          <h1 className="text-3xl font-bold text-gray-50">$19</h1>
-          <p className="text-white">per month</p>
-          <p className="text-white">billed annually</p>
-        </div>
-
-        <div className="mt-auto">
-          <button className="px-14 py-2 bg-gradient-to-t from-gray-400 to-slate-50 text-black rounded-md hover:text-white hover:border hover:border-white hover:bg-none  transition duration-300">
-            View our pricing
-          </button>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-end">
+          {plans.map((plan, index) => (
+            <div key={index} className="relative h-auto transform transition-transform duration-300 hover:scale-105">
+              <div className="h-full rounded-2xl p-8 bg-white/5 backdrop-blur-sm border border-gray-200/20 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition-all duration-300">
+                <h3 className="text-xl font-medium mb-4 text-white">{plan.title}</h3>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-white">{plan.price}</span>
+                  <span className="text-gray-400 ml-2">/mo</span>
+                </div>
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, index) => (
+                    <li key={index} className="flex items-center gap-3">
+                      <Check className="h-4 w-4 text-black bg-gray-300 rounded-full p-1 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <button className="w-full py-2 px-4 rounded-lg bg-white text-black font-medium hover:bg-gray-100 transition-colors duration-200">
+                  Buy now
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
+
 
 export default PricingSection;

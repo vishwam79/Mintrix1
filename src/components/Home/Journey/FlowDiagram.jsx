@@ -3,6 +3,15 @@ import { MapPin, ArrowUpDown, Timer, Send, Files } from "lucide-react";
 import About from "./About.jsx";
 
 const FlowDiagram = () => {
+
+
+  const Data =[
+    {
+      item:"1",
+      icon:"MapPin",
+      title:"map"
+    }
+  ]
   return (
     <>
       <About />
@@ -79,8 +88,6 @@ const FlowDiagram = () => {
                   <div className="absolute -bottom-1 -right-16 w-16 h-[5px] bg-purple-500" />
                 </div>
               </div>
-
-              
             </div>
 
             {/* 22222*/}
@@ -119,8 +126,6 @@ const FlowDiagram = () => {
                   </span>
                 </div>
               </div>
-
-             
             </div>
 
             {/* 33333 */}
@@ -157,8 +162,6 @@ const FlowDiagram = () => {
                   <div className="absolute -bottom-1 -right-16 w-16 h-[5px] bg-purple-500" />
                 </div>
               </div>
-
-             
             </div>
 
             {/* 444444 */}
@@ -197,8 +200,6 @@ const FlowDiagram = () => {
                   </span>
                 </div>
               </div>
-
-            
             </div>
 
             {/* 555555 */}
@@ -235,8 +236,6 @@ const FlowDiagram = () => {
                   <div className="absolute -bottom-1 -right-16 w-16 h-[5px] bg-purple-500" />
                 </div>
               </div>
-
-              
             </div>
           </div>
         </div>
