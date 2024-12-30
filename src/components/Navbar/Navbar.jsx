@@ -1,9 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { MdOutlineMenu } from "react-icons/md";
 import { TbBus } from "react-icons/tb";
 import { RxCross2 } from "react-icons/rx";
-import { MdArrowOutward, MdOutlineMenu } from "react-icons/md";
+import { MdArrowOutward } from "react-icons/md";
+
 
 import Mobilenav from "./Mobilenav.jsx";
 import "./Navbar.css";
