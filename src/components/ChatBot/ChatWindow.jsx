@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import ChatInput from "./chatInput.jsx";
-import { FaUser } from "react-icons/fa";
-import { FaLocationArrow } from "react-icons/fa";
+import { FaUser, FaLocationArrow } from "react-icons/fa";
+
+import { AiOutlineLike, AiTwotoneDislike } from "react-icons/ai";
+import { IoMdShare } from "react-icons/io";
+import { BsThreeDotsVertical } from "react-icons/bs";
 
 const ChatWindow = ({ message, isFirstMessage, onSendMessage }) => {
-  // Reference for the message display area
   const messagesContainerRef = useRef(null);
 
   // Scroll to the bottom whenever messages change
@@ -53,10 +55,23 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage }) => {
                       {msg.text}{" "}
                     </div>
                   ) : (
-                    <div className="flex gap-4 ">
-                      {" "}
-                      <img src="/mintrix-logo.png" className="w-5 h-5" alt="" />
-                      {msg.text}{" "}
+                    <div className="flex-col gap-4">
+                      <div className="flex gap-4 ">
+                        {" "}
+                        <img
+                          src="/mintrix-logo.png"
+                          className="w-5 h-5"
+                          alt=""
+                        />
+                        {msg.text}{" "}
+                      </div>
+
+                      <div className="flex gap-6 mt-10">
+                        <AiOutlineLike className="w-4 h-4" />
+                        <AiTwotoneDislike className="w-4 h-4" />
+                        <IoMdShare className="w-4 h-4" />
+                        <BsThreeDotsVertical className="w-4 h-4" />
+                      </div>
                     </div>
                   )}
                 </div>

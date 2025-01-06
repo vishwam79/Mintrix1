@@ -40,10 +40,12 @@ const PricingSection = () => {
   ];
 
   return (
-    <div className="min-h-screen mt-20  md:py-40 py-20 px-4">
+    <div className=" max-w-[1280px] mx-auto mt-40 pb-10 px-4 mb-20 border-[1px] border-gray-600 rounded-md">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white mb-4">One Account for all AI needs</h2>
+        <div className="text-center mb-10 mt-10">
+          <h2 className="text-3xl font-semibold text-white mb-4 uppercase">One Account for all AI needs</h2>
+
+          
           
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto items-end">

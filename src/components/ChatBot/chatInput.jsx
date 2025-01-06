@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { FaLocationArrow } from "react-icons/fa";
 
 const Chat = ({ isFirstMessage, onSendMessage }) => {
@@ -8,6 +7,7 @@ const Chat = ({ isFirstMessage, onSendMessage }) => {
   const onSubmit = () => {
     if (input.trim()) {
       onSendMessage(input);
+
       setInput("");
     }
   };
@@ -20,8 +20,8 @@ const Chat = ({ isFirstMessage, onSendMessage }) => {
   };
 
   const handleTextClick = (text) => {
-    setInput(text); // Set the input value to the clicked text
-  };
+    setInput(text); 
+  }
 
   return (
     <>
@@ -31,7 +31,7 @@ const Chat = ({ isFirstMessage, onSendMessage }) => {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
             value={input}
-            className="w-full outline-none bg-gray-900 border border-gray-800 pr-10 pl-10 py-3 mx-auto rounded-full  text-gray-300"
+            className="w-full outline-none bg-gradient-to-t from-[#090b0b] via-gray-900 to-black  border border-gray-600 pr-10 pl-10 py-3 mx-auto rounded-full  text-gray-300"
             placeholder="Enter a prompt here..."
           />
           <FaLocationArrow
@@ -39,7 +39,10 @@ const Chat = ({ isFirstMessage, onSendMessage }) => {
             className="absolute top-1/2 right-12 transform -translate-y-1/2 w-5 h-5 text-white cursor-pointer"
           />
         </div>
-        <p className="text-[12px] text-gray-400 py-2 text-light hidden sm:block">Mintrix may display inaccurate info, including about people, so double-check its responses. Your privacy & Mintrix Apps</p>
+        <p className="text-[12px] text-gray-400 py-2 text-light hidden sm:block">
+          Mintrix may display inaccurate info, including about people, so
+          double-check its responses. Your privacy & Mintrix Apps
+        </p>
       </div>
     </>
   );

@@ -2,10 +2,10 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar.jsx";
 import BentoGrid from "../../components/Home/BentoGrid/Bento.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
-import Usecase from "../../components/Home/UseCase/Usecase.jsx";
-import Users from "../../components/Home/Stories/User.jsx";
-import Testimonial from "../../components/Home/Testimonial/testimonial.jsx";
-import Pricing from "../../components/Home/Pricing/PricingSection.jsx";
+import Users from "../../components/Home/Users/Users.jsx";
+import Automation from "../../components/Home/Automation/Automation.jsx";
+import Blogs from "../../components/Home/Blogs/Blog.jsx";
+import Pricing from "../../components/Home/Pricing/PricingSection1.jsx";
 import HeroSection from "../../components/Home/Header/HeroSection.jsx";
 
 import FlowDiagram from "../../components/Home/Journey/FlowDiagram.jsx";
@@ -16,10 +16,10 @@ const Home = () => {
       <Navbar />
       <HeroSection />
       <BentoGrid />
-
-      <Usecase />
       <Users />
-      <Testimonial />
+      <Automation />
+      <Blogs />
+      
       <FlowDiagram />
       <Pricing />
       <Footer />
