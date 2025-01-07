@@ -4,7 +4,7 @@ import "./index.css";
 export default function Main() {
   return (
     <>
-      <div className=" main-container w-[586px] h-[868px]  relative mx-auto my-0 z-[5]">
+      <div className="md:block hidden main-container w-[586px] h-[868px]  relative mx-auto my-0 z-[5]">
         <div className="flex w-[556px] h-[396px] flex-col gap-[32px] items-center flex-nowrap rounded-[24px] absolute top-[4px] left-[15px] z-30">
           <div className="w-[556px] h-[396px] self-stretch shrink-0 bg-[url(../assets/images/fd8c7909-c92f-4bf7-9a6e-d4558db32b03.png)] bg-cover bg-no-repeat absolute top-0 left-0 z-[31]" />
           <div className="w-[376px] h-[376px] shrink-0 bg-[url(../assets/images/ac92efcd-3d1c-475f-bdcc-3dae0bc4756a.png)] bg-cover bg-no-repeat rounded-[50%] absolute top-[230px] left-1/2 translate-x-[-50%] translate-y-0 box-content z-[32]" />

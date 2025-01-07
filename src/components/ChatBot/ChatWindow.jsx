@@ -23,7 +23,7 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage }) => {
 
   return (
     <>
-      <div className="w-[100%] max-h-[90vh]  rounded-md   flex flex-col justify-between items-center mx-auto pb-10 lg:pb-20 md:pb-12">
+      <div className="w-[100%]  max-h-[85vh]  rounded-md   flex flex-col justify-between items-center mx-auto pb-10 lg:pb-20 md:pb-12 ">
         {/* Message Display Area */}
 
         {!isFirstMessage ? (
@@ -34,7 +34,7 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage }) => {
               scrollbarWidth: "none",
               msOverflowStyle: "none", // For IE and Edge
             }}
-            className="flex w-full text-start flex-col max-w-[1000px]  gap-4 w-full h-full pt-20"
+            className="flex lg:w-[900px] md:[700px] w-full text-start flex-col max-w-[1000px]  gap-4  h-full pt-20"
           >
             {message?.map((msg, index) => (
               <div
@@ -44,15 +44,15 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage }) => {
                 }`}
               >
                 <div
-                  className={`p-3 rounded-md text-white  inline-block ${
-                    msg.sender === "user" ? "text-left" : " text-left"
+                  className={`p-3 m-2 rounded-md text-white  inline-block ${
+                    msg.sender === "user" ? "self-start    py-4 w-[100%] " : "self-start    py-4 w-[100%]"
                   }`}
                 >
                   {msg.sender === "user" ? (
-                    <div className="flex gap-4 ">
+                    <div className="flex gap-4  ">
                       {" "}
                       <FaUser className="w-4 h-4" />
-                      {msg.text}{" "}
+                      <span className="text-left">{msg.text}</span>
                     </div>
                   ) : (
                     <div className="flex-col gap-4">
@@ -63,7 +63,7 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage }) => {
                           className="w-5 h-5"
                           alt=""
                         />
-                        {msg.text}{" "}
+                       <span className="text-left">{msg.text}</span>
                       </div>
 
                       <div className="flex gap-6 mt-10">

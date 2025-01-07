@@ -18,7 +18,7 @@ const responsive = {
     slidesToSlide: 1,
   },
   mobile: {
-    breakpoint: { max: 300, min: 300 },
+    breakpoint: { max: 600, min: 0 }, // Proper mobile range
     items: 1,
     slidesToSlide: 1,
   },
@@ -114,7 +114,7 @@ const Slider = () => {
           {sliderImageUrl.map((imageUrl, index) => {
             return (
               <div
-                className="mx-[10px] py-[2rem] transform transition-transform hover:scale-110  object-cover h-[440px] rounded-md flex justify-start items-end"
+                className="mx-[10px] py-[2rem] transform transition-transform hover:scale-110  object-cover h-[440px] rounded-md flex justify-start items-end max-w-[320px]"
                 key={index}
                 style={{ backgroundImage: `url(${imageUrl.url})` }}
               >
