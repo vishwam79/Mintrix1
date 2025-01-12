@@ -7,6 +7,7 @@ import { RxCross2 } from "react-icons/rx";
 import { MdArrowOutward } from "react-icons/md";
 
 
+
 import Mobilenav from "./Mobilenav.jsx";
 import "./Navbar.css";
 
@@ -74,7 +75,7 @@ const Navbar = () => {
               onClick={() => setMenu(false)}
               className="text-white text-right font-bold cursor-pointer"
             >
-              Close
+            
             </p>
           </div>
         )}

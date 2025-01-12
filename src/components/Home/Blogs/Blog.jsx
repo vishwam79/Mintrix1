@@ -19,7 +19,7 @@ const responsive = {
   },
   mobile: {
     breakpoint: { max: 600, min: 0 }, // Proper mobile range
-    items: 1,
+    items: 1.1,
     slidesToSlide: 1,
   },
 };
@@ -99,7 +99,7 @@ const Slider = () => {
         <CustomRightArrow onClick={handleNext} />
       </div>
 
-      <div className="parent max-w-[1280px] mx-auto relative">
+      <div className="parent max-w-[1280px] ml-2 mx-auto relative">
         <Carousel
           ref={carouselRef}
           responsive={responsive}

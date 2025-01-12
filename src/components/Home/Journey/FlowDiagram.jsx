@@ -1,17 +1,15 @@
 import React from "react";
-import { MapPin, ArrowUpDown, Timer, Send, Files } from "lucide-react";
+
 import About from "./About.jsx";
 
+import { GiSandsOfTime } from "react-icons/gi";
+import { CiEdit } from "react-icons/ci";
+import { GoCpu } from "react-icons/go";
+import { FaChartBar } from "react-icons/fa";
+import { GrResources } from "react-icons/gr";
+
 const FlowDiagram = () => {
-
-
-  const Data =[
-    {
-      item:"1",
-      icon:"MapPin",
-      title:"map"
-    }
-  ]
+  
   return (
     <>
       <About />
@@ -29,7 +27,7 @@ const FlowDiagram = () => {
             <path
               d="M0 100 C300 100, 300 50, 500 100 C700 150, 750 100, 1000 100"
               stroke="url(#gradient)"
-              strokeWidth="4"
+              strokeWidth="6"
               fill="none"
             />
             <defs>
@@ -41,67 +39,61 @@ const FlowDiagram = () => {
           </svg>
 
           {/* Start and End Buttons */}
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4">
-            <div className="w-16 h-16 rounded-full bg-purple-500 flex items-center justify-center text-white font-semibold">
-              Start
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 flex flex-col">
+            
+            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 flex items-center justify-center text-white font-semibold">
+           <span className="-mt-24 ml-8"> Discovery  Call</span>
             </div>
+            
+           
           </div>
+         
+
+          
 
           <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4">
-            <div className="w-16 h-16 rounded-full bg-pink-500 flex items-center justify-center text-white font-semibold">
-              End
+            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-semibold">
+            <span className="-mt-32 md:ml-12 mr-5"> Upgrade & Updates</span>
             </div>
           </div>
 
           {/* Steps */}
           <div className="relative flex justify-between items-center h-[400px] -mt-28 mx-16">
             {/* 111111 */}
-            <div className="relative mb-16 flex flex-col items-center">
+            <div className="relative h-80 flex flex-col items-center">
               {/* Icon Circle */}
 
               <div>
-                <span className="absolute -top-8 text-white text-sm font-medium whitespace-nowrap">
-                  Audit/Deep Dive
+                <span className="absolute -top-12 text-white text-sm font-light whitespace-nowrap">
+                Provisonal <br></br> Contract Signing
                 </span>
+               
 
                 <div className="w-12 h-12 rounded-full border border-white/30 bg-[#09090b] flex items-center justify-center ">
-                  <MapPin className="w-6 h-6 text-white" />
+                  <CiEdit className="w-6 h-6 text-white" />
                 </div>
               </div>
-
-              {/* Vertical Line */}
-
-              <div className="relative h-56  w-[1px] bg-white/30" />
-
-              {/* White Dot on Curve */}
-
-              <div className="absolute w-3 h-3 rounded-full bg-white mx-16 bottom-[50px] " />
-
-              {/* Number Box with Line */}
-              <div className="absolute -bottom-12 ml-4  flex flex-col items-center">
+              <div className="relative h-[100%]  w-[1px] bg-white/30" />
+              <div className="absolute w-3 h-3 rounded-full bg-white bottom-[110px] "></div>
+              <div className="absolute bottom-0 flex flex-col items-center">
                 <div className="relative">
                   <div className="w-8 h-8 rounded bg-[#09090b] border border-white/30 flex items-center justify-center text-white text-sm">
                     1
                   </div>
-                  <div className="relative w-8 h-8 ml-5 bg-[#09090b] border-white/30 border-l border-b flex items-center justify-center text-white text-sm"></div>
-                  {/* Horizontal Line */}
-                  <div className="absolute -bottom-1 -right-16 w-16 h-[5px] bg-purple-500" />
                 </div>
               </div>
             </div>
 
             {/* 22222*/}
 
-            <div className="relative -mb-28 flex flex-col items-center">
+            <div className="relative top-20 flex flex-col items-center">
               {/* Icon Circle */}
 
               <div>
-                <div className="relative w-8 h-6 ml-5 bg-[#09090b] border-white/30 border-l border-t flex items-center justify-center text-white text-sm">
-                  <div className="absolute -top-1 -right-16 w-16 h-[5px] bg-purple-500" />
-                </div>
+               
                 {/* Horizontal Line */}
 
-                <div className="w-8 h-8 ml-3 rounded bg-[#09090b] border border-white/30 flex items-center justify-center text-white text-sm">
+                <div className="w-8 h-8  rounded bg-[#09090b] border border-white/30 flex items-center justify-center text-white text-sm">
                   2
                 </div>
               </div>
@@ -112,17 +104,17 @@ const FlowDiagram = () => {
 
               {/* White Dot on Curve */}
 
-              <div className="absolute w-3 h-3 rounded-full bg-white mx-16 top-[105px] " />
+              <div className="absolute w-3 h-3 rounded-full bg-white top-16 " />
 
               {/* Number Box with Line */}
               <div className="absolute -bottom-12 ml-4  flex flex-col items-center">
                 <div className="relative">
-                  <div className="w-12 h-12 rounded-full border border-white/30 bg-[#09090b] flex items-center justify-center mr-4 ">
-                    <Timer className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 rounded-full border border-white/30 bg-[#09090b] flex items-center justify-center ">
+                    <GiSandsOfTime className="w-6 h-6 text-white" />
                   </div>
 
-                  <span className="-top-8 text-white text-sm font-medium whitespace-nowrap">
-                    Offer Review
+                  <span className="-top-8 text-white text-sm font-light whitespace-nowrap ">
+                  Assessment
                   </span>
                 </div>
               </div>
@@ -130,52 +122,39 @@ const FlowDiagram = () => {
 
             {/* 33333 */}
 
-            <div className="relative mb-16 flex flex-col items-center">
+            <div className="relative h-56 flex flex-col items-center">
               {/* Icon Circle */}
 
               <div>
-                <span className="absolute -top-8 text-white text-sm font-medium whitespace-nowrap">
-                  User Journey
+                <span className="absolute -top-12 text-white text-sm font-light whitespace-nowrap">
+                Operations <br></br>
+                Mapping
                 </span>
 
                 <div className="w-12 h-12 rounded-full border border-white/30 bg-[#09090b] flex items-center justify-center ">
-                  <ArrowUpDown className="w-6 h-6 text-white" />
+                  <FaChartBar className="w-6 h-6 text-white" />
                 </div>
               </div>
-
-              {/* Vertical Line */}
-
-              <div className="relative h-56  w-[1px] bg-white/30" />
-
-              {/* White Dot on Curve */}
-
-              <div className="absolute w-3 h-3 rounded-full bg-white mx-16 bottom-[44px] " />
-
-              {/* Number Box with Line */}
-              <div className="absolute -bottom-12 ml-4  flex flex-col items-center">
+              <div className="relative h-[100%]  w-[1px] bg-white/30" />
+              <div className="absolute w-3 h-3 rounded-full bg-white bottom-[52px] "></div>
+              <div className="absolute bottom-0 flex flex-col items-center">
                 <div className="relative">
                   <div className="w-8 h-8 rounded bg-[#09090b] border border-white/30 flex items-center justify-center text-white text-sm">
                     3
                   </div>
-                  <div className="relative w-8 h-8 ml-5 bg-[#09090b] border-white/30 border-l border-b flex items-center justify-center text-white text-sm"></div>
-                  {/* Horizontal Line */}
-                  <div className="absolute -bottom-1 -right-16 w-16 h-[5px] bg-purple-500" />
                 </div>
               </div>
             </div>
-
             {/* 444444 */}
 
-            <div className="relative -mb-28 flex flex-col items-center">
+            <div className="relative mt-72 flex flex-col items-center">
               {/* Icon Circle */}
 
               <div>
-                <div className="relative w-8 h-6 ml-5 bg-[#09090b] border-white/30 border-l border-t flex items-center justify-center text-white text-sm">
-                  <div className="absolute -top-1 -right-16 w-16 h-[5px] bg-purple-500" />
-                </div>
+               
                 {/* Horizontal Line */}
 
-                <div className="w-8 h-8 ml-3 rounded bg-[#09090b] border border-white/30 flex items-center justify-center text-white text-sm">
+                <div className="w-8 h-8  rounded bg-[#09090b] border border-white/30 flex items-center justify-center text-white text-sm">
                   4
                 </div>
               </div>
@@ -186,54 +165,46 @@ const FlowDiagram = () => {
 
               {/* White Dot on Curve */}
 
-              <div className="absolute w-3 h-3 rounded-full bg-white mx-16 bottom-[105px] " />
+              <div className="absolute w-3 h-3 rounded-full bg-white top-16 " />
 
               {/* Number Box with Line */}
               <div className="absolute -bottom-12 ml-4  flex flex-col items-center">
                 <div className="relative">
-                  <div className="w-12 h-12 rounded-full border border-white/30 bg-[#09090b] flex items-center justify-center ml-6 ">
-                    <Send className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 rounded-full border border-white/30 bg-[#09090b] flex items-center justify-center  ">
+                    <GoCpu className="w-6 h-6 text-white" />
                   </div>
 
-                  <span className="-top-8 text-white text-sm font-medium whitespace-nowrap ">
-                    Sales Copywritting
+                  <span className="-top-10 text-white text-sm font-light whitespace-nowrap ">
+                  Resource <br></br>
+                  Evaluation
                   </span>
                 </div>
               </div>
             </div>
 
+
             {/* 555555 */}
 
-            <div className="relative mb-1 flex flex-col items-center">
+            <div className="relative h-56 mt-16 flex flex-col items-center">
               {/* Icon Circle */}
 
               <div>
-                <span className="absolute -top-8 text-white text-sm font-medium whitespace-nowrap">
-                  Nurture Campaigns
+                <span className="absolute -top-12 text-white text-sm font-light whitespace-nowrap">
+                Devlopment <br></br>&
+                Deployment
                 </span>
 
                 <div className="w-12 h-12 rounded-full border border-white/30 bg-[#09090b] flex items-center justify-center ">
-                  <Files className="w-6 h-6 text-white" />
+                  <GrResources className="w-6 h-6 text-white" />
                 </div>
               </div>
-
-              {/* Vertical Line */}
-
-              <div className="relative h-56  w-[1px] bg-white/30" />
-
-              {/* White Dot on Curve */}
-
-              <div className="absolute w-3 h-3 rounded-full bg-white mx-16 bottom-[60px] " />
-
-              {/* Number Box with Line */}
-              <div className="absolute -bottom-12 ml-4  flex flex-col items-center">
+              <div className="relative h-[100%]  w-[1px] bg-white/30" />
+              <div className="absolute w-3 h-3 rounded-full bg-white bottom-[62px] "></div>
+              <div className="absolute bottom-0 flex flex-col items-center">
                 <div className="relative">
                   <div className="w-8 h-8 rounded bg-[#09090b] border border-white/30 flex items-center justify-center text-white text-sm">
                     5
                   </div>
-                  <div className="relative w-8 h-8 ml-5 bg-[#09090b] border-white/30 border-l border-b flex items-center justify-center text-white text-sm"></div>
-                  {/* Horizontal Line */}
-                  <div className="absolute -bottom-1 -right-16 w-16 h-[5px] bg-purple-500" />
                 </div>
               </div>
             </div>

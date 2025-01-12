@@ -34,7 +34,7 @@ const Header = () => {
           </button>
         </div>
 
-        <p className="z-50 text-xl mt-5 text-white">“Your School. Your Vision. Powered by MINTRIX.”</p>
+        <p className=" text-xl mt-5 text-white">“Your School. Your Vision. Powered by MINTRIX.”</p>
         <button className=
         
         "text-sm lg:hidden px-5 py-3 mt-1 sm:mt-0 sm:ml-2 rounded-lg bg-gradient-to-r from-[#B852D7] via-[#AE5BE9] to-[#C65A94] text-white flex items-center gap-2">

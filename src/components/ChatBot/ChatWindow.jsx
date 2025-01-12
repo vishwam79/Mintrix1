@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import ChatInput from "./chatInput.jsx";
 import { FaUser, FaLocationArrow } from "react-icons/fa";
-
 import { AiOutlineLike, AiTwotoneDislike } from "react-icons/ai";
 import { IoMdShare } from "react-icons/io";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { TypeAnimation } from "react-type-animation";
 
-const ChatWindow = ({ message, isFirstMessage, onSendMessage }) => {
+const ChatWindow = ({ message, isFirstMessage, onSendMessage, loading }) => {
   const messagesContainerRef = useRef(null);
 
   // Scroll to the bottom whenever messages change
@@ -23,18 +23,24 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage }) => {
 
   return (
     <>
-      <div className="w-[100%]  max-h-[85vh]  rounded-md   flex flex-col justify-between items-center mx-auto pb-10 lg:pb-20 md:pb-12 ">
+      <div className="w-[100%]  max-h-[85vh] rounded-md   flex flex-col justify-between items-center mx-auto pb-10 lg:pb-20 md:pb-12 ">
         {/* Message Display Area */}
 
         {!isFirstMessage ? (
-          <div
+         
+         
+         <div className="flex flex-col w-[100%]  max-h-[85vh] rounded-md mx-auto pb-10 lg:pb-20 md:pb-12">
+
+
+         
+         <div
             ref={messagesContainerRef}
             style={{
               overflowY: "auto",
               scrollbarWidth: "none",
               msOverflowStyle: "none", // For IE and Edge
             }}
-            className="flex lg:w-[900px] md:[700px] w-full text-start flex-col max-w-[1000px]  gap-4  h-full pt-20"
+            className="flex lg:w-[900px] md:[700px] w-full text-start flex-col max-w-[1000px]  gap-2  h-full pt-20"
           >
             {message?.map((msg, index) => (
               <div
@@ -45,14 +51,20 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage }) => {
               >
                 <div
                   className={`p-3 m-2 rounded-md text-white  inline-block ${
-                    msg.sender === "user" ? "self-start    py-4 w-[100%] " : "self-start    py-4 w-[100%]"
+                    msg.sender === "user"
+                      ? "self-start    py-1 w-[100%] "
+                      : "self-start    py-1 w-[100%]"
                   }`}
                 >
                   {msg.sender === "user" ? (
-                    <div className="flex gap-4  ">
+                    <div className="flex flex-col gap-4  ">
                       {" "}
-                      <FaUser className="w-4 h-4" />
-                      <span className="text-left">{msg.text}</span>
+                      <div className="flex gap-4">
+                        {" "}
+                        <FaUser className="w-4 h-4" />
+                        <span className="text-left">{msg.text}</span>
+                      </div>
+                     
                     </div>
                   ) : (
                     <div className="flex-col gap-4">
@@ -63,7 +75,7 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage }) => {
                           className="w-5 h-5"
                           alt=""
                         />
-                       <span className="text-left">{msg.text}</span>
+                        <span className="text-left">{msg.text}</span>
                       </div>
 
                       <div className="flex gap-6 mt-10">
@@ -78,6 +90,41 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage }) => {
               </div>
             ))}
           </div>
+
+
+
+          {loading && (
+                        <div className="flex ml-4 mt-4 gap-4 items-center ">
+                          {" "}
+                          <img
+                            src="/mintrix-logo.png"
+                            className="w-5 h-5"
+                            alt=""
+                          />
+                          <span className="text-left text-[15px] text-gray-300">
+                            Typing{" "}
+                            <TypeAnimation
+                              sequence={[
+                                "...",
+                                1000,
+                                "......",
+                                1000,
+                                "..",
+                                1000,
+                              ]}
+                              speed={170}
+                              style={{
+                                fontSize: "14px",
+                                display: "inline-block",
+                              }}
+                              repeat={Infinity}
+                            />
+                          </span>
+                        </div>
+                      )}
+
+
+                      </div>
         ) : (
           <div className="w-full h-full">
             <div className="space-y-4 text-center">
@@ -87,7 +134,21 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage }) => {
                 </span>
               </h1>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
-                How can I help you today?
+                <TypeAnimation
+                  sequence={[
+                    // Same substring at the start will only be typed out once, initially
+                    "How can I help you today?",
+                    1000, // wait 1s before replacing "Mice" with "Hamsters"
+                    "Automate Administrations",
+                    1000,
+                    "Revolutionizing	Education	with AI",
+                    1000,
+                  ]}
+                  wrapper="span"
+                  speed={170}
+                  style={{ fontSize: "30px", display: "inline-block" }}
+                  repeat={Infinity}
+                />
               </h2>
             </div>
 

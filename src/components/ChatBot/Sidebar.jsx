@@ -12,23 +12,23 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
   return (
     <div>
       <div className=" md:block hidden">
-        <nav className=" bg-gray-900  shadow-lg h-screen left-0 max-w-[70px] fixed w-full z-10 px-4 py-2">
+        <nav className=" bg-[#090b0b]  shadow-lg h-screen left-0 max-w-[70px] fixed w-full z-10 px-4 py-2">
           <div className="flex h-screen flex-col justify-between items-center gap-10">
             <div className="flex flex-col justify-center gap-20 mt-2 items-center">
-              <div className="w-10 h-10 rounded-sm cursor-pointer bg-gray-800 flex justify-center items-center">
+              <div className="w-10 h-10 rounded-sm cursor-pointer bg-gray-800 flex justify-center items-center backdrop-blur-md bg-opacity-50">
                 {" "}
                 <MdOutlineMenu
                   onClick={() => setIsOpen(true)}
                   className="w-6 h-6 "
                 />
               </div>
-              <div className="w-10 h-10 rounded-sm bg-gray-800 flex justify-center items-center">
+              <div className="w-10 h-10 rounded-sm bg-gray-800 flex justify-center items-center backdrop-blur-md bg-opacity-50">
                 {" "}
                 <FiPlus className="w-6 h-6 " />
               </div>
             </div>
 
-            <div className="w-10 h-10 rounded-sm mb-4 bg-gray-800 flex justify-center items-center">
+            <div className="w-10 h-10 rounded-sm mb-4 bg-gray-800 flex justify-center items-center backdrop-blur-md bg-opacity-50">
               {" "}
               <MdOutlineHistory className="w-6 h-6 " />
             </div>
@@ -38,7 +38,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
 
       {isOpen ? (
         <div className="">
-          <nav className=" text-white bg-gray-900 border-r-[0.5px] border-gray-900  shadow-lg h-screen left-0 max-w-[300px] fixed w-full z-10 px-4 py-2 transition-all duration-300">
+          <nav className=" text-white bg-[#090b0b] backdrop-blur-md bg-opacity-90 border-r-[0.5px] border-gray-900  shadow-lg h-screen left-0 max-w-[300px] fixed w-full z-10 px-4 py-2 transition-all duration-300">
             <div className="flex h-screen flex-col justify-between gap-10">
               <div className="flex flex-col  gap-10  ">
                 <div className="flex justify-start gap-10 mt-2">
@@ -67,10 +67,11 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                   </div>
                 </div>
                 <div>
-                  <a href="/chat"><div className="max-w-max px-6 py-3 gap-3 rounded-full  bg-gray-800 flex justify-start cursor-pointer pl-4 items-center">
+                  <a href="/chat">
+                  <div className="max-w-max px-6 py-3 gap-3 rounded-full  bg-gray-800 flex justify-start cursor-pointer pl-4 items-center backdrop-blur-md bg-opacity-50">
                     {" "}
                     <FiPlus className="w-5 h-5 " />
-                    <h2 className="text-[13px] ">New Chat</h2>
+                    <h2 className="text-[13px]  ">New Chat</h2>
                   </div>
 
                   </a>
@@ -84,7 +85,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
                 </div>
               </div>
 
-              <div className="w-8 h-8 rounded-sm bg-gray-800 flex justify-center items-center">
+              <div className="w-8 h-8 rounded-sm bg-gray-900 flex justify-center items-center backdrop-blur-md bg-opacity-50">
                 {" "}
                 <MdOutlineHistory className="w-5 h-5 " />
               </div>
