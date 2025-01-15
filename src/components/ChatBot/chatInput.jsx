@@ -31,7 +31,7 @@ const Chat = ({ isFirstMessage, onSendMessage }) => {
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
             value={input}
-            className="w-full outline-none bg-gradient-to-t from-[#090b0b] via-gray-900 to-black border border-gray-600 pr-12 pl-4 py-3 rounded-full text-gray-300"
+            className="w-full outline-none bg-gradient-to-t from-[#090b0b] via-gray-900 to-black border border-gray-800 pr-12 pl-4 py-3 rounded-full text-gray-300 text-"
             placeholder="Enter a prompt here..."
           />
           <FaLocationArrow

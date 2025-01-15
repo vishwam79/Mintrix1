@@ -6,7 +6,7 @@ import { MdOutlineHistory } from "react-icons/md";
 
 import RecentChat from "./recentChat.jsx";
 
-const Sidebar = ({ isOpen, setIsOpen }) => {
+const Sidebar = ({ isOpen, setIsOpen, message }) => {
   // const [isOpen, setIsOpen] = useState(false);
 
   return (

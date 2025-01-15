@@ -23,8 +23,10 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage, loading }) => {
 
   return (
     <>
-      <div className="w-[100%]  max-h-[85vh] rounded-md   flex flex-col justify-between items-center mx-auto pb-10 lg:pb-20 md:pb-12 ">
+      <div className="max-w-[900px]   max-h-[85vh] rounded-md   flex flex-col justify-between items-center  mx-auto pb-10 lg:pb-20 md:pb-12 ">
         {/* Message Display Area */}
+
+
 
         {!isFirstMessage ? (
          
@@ -40,7 +42,7 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage, loading }) => {
               scrollbarWidth: "none",
               msOverflowStyle: "none", // For IE and Edge
             }}
-            className="flex lg:w-[900px] md:[700px] w-full text-start flex-col max-w-[1000px]  gap-2  h-full pt-20"
+            className="flex lg:w-[900px] md:w-[700px] w-[100%] text-start flex-col max-w-[1000px]  gap-2  h-full pt-20"
           >
             {message?.map((msg, index) => (
               <div
@@ -59,10 +61,10 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage, loading }) => {
                   {msg.sender === "user" ? (
                     <div className="flex flex-col gap-4  ">
                       {" "}
-                      <div className="flex gap-4">
+                      <div className="flex gap-4 bg-gray-900 py-2 rounded-md">
                         {" "}
                         <FaUser className="w-4 h-4" />
-                        <span className="text-left">{msg.text}</span>
+                        <span className="text-left font-light">{msg.text}</span>
                       </div>
                      
                     </div>
@@ -75,7 +77,7 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage, loading }) => {
                           className="w-5 h-5"
                           alt=""
                         />
-                        <span className="text-left">{msg.text}</span>
+                        <span className="text-left font-light">{msg.text}</span>
                       </div>
 
                       <div className="flex gap-6 mt-10">
@@ -136,9 +138,9 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage, loading }) => {
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
                 <TypeAnimation
                   sequence={[
-                    // Same substring at the start will only be typed out once, initially
+                    
                     "How can I help you today?",
-                    1000, // wait 1s before replacing "Mice" with "Hamsters"
+                    1000, 
                     "Automate Administrations",
                     1000,
                     "Revolutionizing	Education	with AI",
@@ -180,6 +182,9 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage, loading }) => {
             </div>
           </div>
         )}
+
+
+
 
         {/* Input Component */}
         <ChatInput
