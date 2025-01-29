@@ -55,11 +55,11 @@ const Step = () => {
     <div className="max-w-[1280px] mx-auto relative mt-32 mb-10">
       <div className="my-12 flex justify-between items-center">
         <CustomLeftArrow onClick={() => carouselRef.current.previous()} />
-        <h2 className="text-3xl text-white font-semibold">Users</h2>
+        <h2 className="text-3xl text-white font-semibold ml-2">Users</h2>
         <CustomRightArrow onClick={() => carouselRef.current.next()} />
       </div>
 
-      <div className=" relative">
+      <div className=" relative ml-2">
         <Carousel
           ref={carouselRef}
           responsive={responsive} 

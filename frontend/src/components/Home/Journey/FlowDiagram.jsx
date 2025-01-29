@@ -74,7 +74,7 @@ const FlowDiagram = () => {
                 </div>
               </div>
               <div className="relative h-[100%]  w-[1px] bg-white/30" />
-              <div className="absolute w-3 h-3 rounded-full bg-white bottom-[110px] "></div>
+              <div className="absolute w-3 h-3 rounded-full bg-white bottom-[125px] md:bottom-[100px]  "></div>
               <div className="absolute bottom-0 flex flex-col items-center">
                 <div className="relative">
                   <div className="w-8 h-8 rounded bg-[#09090b] border border-white/30 flex items-center justify-center text-white text-sm">
@@ -104,7 +104,7 @@ const FlowDiagram = () => {
 
               {/* White Dot on Curve */}
 
-              <div className="absolute w-3 h-3 rounded-full bg-white top-16 " />
+              <div className="absolute w-3 h-3 rounded-full bg-white top-[75px] md:top-[70px] " />
 
               {/* Number Box with Line */}
               <div className="absolute -bottom-12 ml-4  flex flex-col items-center">
@@ -122,7 +122,7 @@ const FlowDiagram = () => {
 
             {/* 33333 */}
 
-            <div className="relative h-56 flex flex-col items-center">
+            <div className="relative h-60 md:h-72 mt-6  flex flex-col items-center">
               {/* Icon Circle */}
 
               <div>
@@ -136,7 +136,7 @@ const FlowDiagram = () => {
                 </div>
               </div>
               <div className="relative h-[100%]  w-[1px] bg-white/30" />
-              <div className="absolute w-3 h-3 rounded-full bg-white bottom-[52px] "></div>
+              <div className="absolute w-3 h-3 rounded-full bg-white md:bottom-[90px] bottom-[52px] "></div>
               <div className="absolute bottom-0 flex flex-col items-center">
                 <div className="relative">
                   <div className="w-8 h-8 rounded bg-[#09090b] border border-white/30 flex items-center justify-center text-white text-sm">
@@ -185,7 +185,7 @@ const FlowDiagram = () => {
 
             {/* 555555 */}
 
-            <div className="relative h-56 mt-16 flex flex-col items-center">
+            <div className="relative h-64 md:h-64 mt-16 flex flex-col items-center">
               {/* Icon Circle */}
 
               <div>
@@ -199,7 +199,7 @@ const FlowDiagram = () => {
                 </div>
               </div>
               <div className="relative h-[100%]  w-[1px] bg-white/30" />
-              <div className="absolute w-3 h-3 rounded-full bg-white bottom-[62px] "></div>
+              <div className="absolute w-3 h-3 rounded-full bg-white md:bottom-[90px] bottom-[80px] "></div>
               <div className="absolute bottom-0 flex flex-col items-center">
                 <div className="relative">
                   <div className="w-8 h-8 rounded bg-[#09090b] border border-white/30 flex items-center justify-center text-white text-sm">

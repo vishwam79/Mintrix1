@@ -95,7 +95,7 @@ const Slider = () => {
     <div className="max-w-[1280px] mx-auto relative mt-32 mb-10">
       <div className="my-12 mx-6 flex justify-between items-center">
         <CustomLeftArrow onClick={handlePrev} />
-        <h2 className="text-3xl text-white font-semibold">Blogs</h2>
+        <h2 className="text-3xl text-white font-semibold sm:ml-2">Blogs</h2>
         <CustomRightArrow onClick={handleNext} />
       </div>
 

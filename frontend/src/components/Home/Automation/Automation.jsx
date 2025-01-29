@@ -56,11 +56,11 @@ const Automation = () => {
     <div className="max-w-[1280px] mx-auto relative mt-32 mb-10">
       <div className="my-12 flex justify-between items-center">
         <CustomLeftArrow onClick={() => carouselRef.current.previous()} />
-        <h2 className="text-3xl text-white font-semibold">Automation</h2>
+        <h2 className="text-3xl text-white font-semibold ml-2">Automation</h2>
         <CustomRightArrow onClick={() => carouselRef.current.next()} />
       </div>
 
-      <div className="parent max-w-[1280px] mx-auto relative">
+      <div className="parent max-w-[1280px] mx-auto relative ml-2">
         <Carousel
           ref={carouselRef}
           responsive={responsive}
