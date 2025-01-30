@@ -18,7 +18,7 @@ const chat = () => {
 
     const handleApi = async () => {
       try {
-        const response = await axios.post("http://localhost:3000/chat", {
+        const response = await axios.post("https://chatbot-2cds.onrender.com/chat", {
           query: messages,
         });
 
