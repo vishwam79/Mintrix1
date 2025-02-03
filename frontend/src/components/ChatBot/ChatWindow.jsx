@@ -5,6 +5,7 @@ import { AiOutlineLike, AiTwotoneDislike } from "react-icons/ai";
 import { IoMdShare } from "react-icons/io";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { TypeAnimation } from "react-type-animation";
+import ReactMarkdown from 'react-markdown';
 
 const ChatWindow = ({ message, isFirstMessage, onSendMessage, loading }) => {
   const messagesContainerRef = useRef(null);
@@ -77,7 +78,12 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage, loading }) => {
                           className="w-5 h-5"
                           alt=""
                         />
-                        <span className="text-left ">{msg.text}</span>
+                        <span className="text-left ">
+
+
+
+                        <ReactMarkdown className="prose prose-invert text-base/8">{msg.text}</ReactMarkdown>
+                        </span>
                       </div>
 
                       <div className="flex gap-6 mt-10">
@@ -96,7 +102,7 @@ const ChatWindow = ({ message, isFirstMessage, onSendMessage, loading }) => {
 
 
           {loading && (
-                        <div className="flex ml-4 mt-4 gap-4 items-center ">
+                        <div className="flex ml-4 mt-4 gap-4  ">
                           {" "}
                           <img
                             src="/mintrix-logo.png"

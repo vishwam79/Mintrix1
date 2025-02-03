@@ -24,7 +24,7 @@ const Chat = ({ isFirstMessage, onSendMessage }) => {
 
   return (
     <>
-      <div className="fixed bottom-4 w-full flex flex-col items-center justify-center px-4">
+      <div className="fixed bottom-8 md:bottom-4 w-full flex flex-col items-center justify-center px-4">
         {/* Input Container */}
         <div className="relative w-[94%] max-w-[900px]">
           <input

@@ -9,7 +9,7 @@ import { MdArrowOutward } from "react-icons/md";
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3.6,
+    items: 4,
     slidesToSlide: 1,
   },
   tablet: {
@@ -54,6 +54,11 @@ const sliderImageUrl = [
     title:
       "How Mintrix is changing lives of Teachers",
   },
+  {
+    url: "/Blog.png",
+    title:
+      "How Mintrix is changing lives of Teachers",
+  },
 ];
 
 // Custom Left Arrow
@@ -92,6 +97,7 @@ const Slider = () => {
   };
 
   return (
+    <div className="w-full">
     <div className="max-w-[1280px] mx-auto relative mt-32 mb-10">
       <div className="my-12 mx-6 flex justify-between items-center">
         <CustomLeftArrow onClick={handlePrev} />
@@ -99,7 +105,10 @@ const Slider = () => {
         <CustomRightArrow onClick={handleNext} />
       </div>
 
-      <div className="parent max-w-[1280px] ml-2 mx-auto relative">
+      </div>
+      <div className="flex justify-center w-full  ">
+
+      <div className="max-w-[1280px]">
         <Carousel
           ref={carouselRef}
           responsive={responsive}
@@ -108,18 +117,19 @@ const Slider = () => {
           draggable={true}
           showDots={false}
           infinite={true}
-          partialVisible={false}
-          arrows={false} // Disable default arrows
+          partialVisible={true}
+          arrows={false} 
+          containerClass="flex-col"
         >
           {sliderImageUrl.map((imageUrl, index) => {
             return (
               <div
-                className="mx-[10px] py-[2rem] transform transition-transform hover:scale-110  object-cover h-[440px] rounded-md flex justify-start items-end max-w-[320px]"
+                className="mx-[10px] py-[2rem] transform transition-transform hover:scale-110  object-cover h-[400px] rounded-md flex justify-center items-end w-[300px]"
                 key={index}
                 style={{ backgroundImage: `url(${imageUrl.url})` }}
               >
                 <div className=" px-5  gap-4">
-                <div className="w-10 h-10 overflow-hidden"><img src="/testimonial.jpeg" alt="" className=" rounded-full" /></div>
+                <div className="w-10 h-10 overflow-x-auto"><img src="/testimonial.jpeg" alt="" className=" rounded-full" /></div>
                  <div className="flex justify-between items-center gap-3"><h1 className=" font-semibold text-[19px] text-white">
                   {imageUrl.title}
                   
@@ -132,6 +142,8 @@ const Slider = () => {
           })}
         </Carousel>
       </div>
+    </div>
+
     </div>
   );
 };

@@ -11,17 +11,17 @@ import { MdArrowOutward } from "react-icons/md";
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3.6,
+    items: 4,
     slidesToSlide: 1,
   },
   tablet: {
     breakpoint: { max: 1024, min: 600 },
-    items: 2,
+    items: 3,
     slidesToSlide: 1,
   },
   mobile: {
-    breakpoint: { max: 600, min: 0 }, // Proper mobile range
-    items: 1.1,
+    breakpoint: { max: 600, min: 400 }, // Proper mobile range
+    items: 1.2,
     slidesToSlide: 1,
   },
 };
@@ -81,7 +81,7 @@ const Automation = () => {
               {/* Front Side */}
               <div
                 onMouseEnter={() => hoverHandle(index)}  
-                className="slider object-contain  max-w-[354px]  h-[489px] rounded-md flex justify-start items-end"
+                className="slider object-contain  w-[300px]  h-[400px] rounded-md flex justify-start items-end"
                 style={{ backgroundImage: `url(${imageUrl.url})` }}
               >
                 <h1 className="px-5 text-xl font-bold text-white">
@@ -92,11 +92,11 @@ const Automation = () => {
               {/* Back Side */}
               <div
                onMouseLeave={() => hoverHandle(index)}
-                className="slider object-cover rounded-md max-h-[489px]   max-w-[354px] flex justify-center items-center text-white"
+                className="slider object-cover rounded-md h-[400px]   w-[300px] flex justify-center items-center text-white"
                 style={{ backgroundImage: `url(${imageUrl.url})` }}
               >
                 <div className="top-0 bg-black opacity-60  rounded-lg p-6 text-gray-200 h-[489px]">
-                  <h2 className="text-2xl font-bold mb-2">
+                  <h2 className="text-lg font-bold mb-2">
                     {imageUrl.title}
                   </h2>
                   

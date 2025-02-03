@@ -5,6 +5,7 @@ import Navbar from "../../components/ChatBot/ChatNavbar.jsx";
 import axios from "axios";
 
 
+
 const chat = () => {
   const [isFirstMessage, setIsFirstMessage] = useState(true);
   const [message, setMessage] = useState([]);
@@ -18,7 +19,7 @@ const chat = () => {
 
     const handleApi = async () => {
       try {
-        const response = await axios.post("https://chatbot-2cds.onrender.com/chat", {
+        const response = await axios.post("http://localhost:3000/chat", {
           query: messages,
         });
 

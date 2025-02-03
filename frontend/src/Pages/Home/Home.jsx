@@ -16,7 +16,7 @@ const Home = () => {
       <Navbar />
       <HeroSection />
       <BentoGrid />
-      <Users />
+      <Users/>
       <Automation />
       <Blogs />
       

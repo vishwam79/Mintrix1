@@ -11,17 +11,17 @@ import { MdArrowOutward } from "react-icons/md";
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 3.6,
+    items: 4,
     slidesToSlide: 1,
   },
   tablet: {
     breakpoint: { max: 1024, min: 600 },
-    items: 2,
+    items: 2.4,
     slidesToSlide: 1,
   },
   mobile: {
     breakpoint: { max: 600, min: 0 }, // Proper mobile range
-    items: 1.1,
+    items: 1.2,
     slidesToSlide: 1,
   },
 };
@@ -59,7 +59,7 @@ const Step = () => {
         <CustomRightArrow onClick={() => carouselRef.current.next()} />
       </div>
 
-      <div className=" relative ml-2">
+      <div className=" relative ml-2 snap-x">
         <Carousel
           ref={carouselRef}
           responsive={responsive} 
@@ -70,9 +70,10 @@ const Step = () => {
           infinite={true}
           partialVisible={false}
           arrows={false}
+          containerClass=""
         >
           {Data.map((imageUrl, index) => (
-            <ReactCardFlip
+            <ReactCardFlip 
               isFlipped={!!flippedStates[index]}
               flipDirection="horizontal"
               flipSpeedBackToFront={0.6}
@@ -80,9 +81,9 @@ const Step = () => {
               key={index}
             >
               {/* Front Side */}
-              <div
+              <div 
                 onMouseEnter={() => hoverHandle(index)}  
-                className="slider card-front object-contain  max-w-[354px] h-[489px] rounded-md flex justify-start items-end hover:transform hover:transition-transform hover:duration-300"
+                className="slider snap-center card-front object-contain  w-[300px] h-[400px] rounded-md flex justify-start items-end hover:transform hover:transition-transform hover:duration-300 "
                 style={{ backgroundImage: `url(${imageUrl.url})` }}
               >
                 <h1 className="px-5 text-xl font-bold text-white">
@@ -93,17 +94,17 @@ const Step = () => {
               {/* Back Side */}
               <div
                onMouseLeave={() => hoverHandle(index)}
-                className="relative card-back slider object-cover bg-no-repeat h-[489px] max-w-[354px] rounded-md text-white "
+                className="relative card-back slider object-cover bg-no-repeat h-[400px] w-[300px] rounded-md text-white "
                 style={{ backgroundImage: `url(${imageUrl.url})` }}
               >
                 <div className="absolute top-0 bg-black h-[100%] bg-cover bg-opacity-70 shadow-lg rounded-lg p-4 space-y-3 text-gray-200">
-                  <h2 className="text-[28px] ">
+                  <h2 className="text-lg ">
                     {imageUrl.headline}
                   </h2>
-                  <h3 className="text-[22px] text-gray-300">
+                  <h3 className="text-md text-gray-300">
                     {imageUrl.subheadline}
                   </h3>
-                  <ul className="list-disc list-inside space-y-1 text-[16px]">
+                  <ul className="list-disc list-inside space-y-1 text-base">
                     {imageUrl.content.map((item, index) => (
                       <li key={index} className="">
                         {item}
@@ -112,7 +113,7 @@ const Step = () => {
                   </ul>
 
                   
-                    <button className="md:flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 rounded text-white text-[16px] flex">
+                    <button className="md:flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 rounded text-white text-[14px] flex">
                       {imageUrl.cta}
                       <MdArrowOutward />
                     </button>
