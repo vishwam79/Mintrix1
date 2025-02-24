@@ -12,6 +12,11 @@ const chat = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
+
+  const username = "mintrix";
+  const password = "mintrix@123";
+  const credentials = btoa(`${username}:${password}`);
+
   const handleSendMessage = (messages) => {
     setMessage([...message, { sender: "user", text: messages }]);
     setIsFirstMessage(false);
@@ -19,16 +24,25 @@ const chat = () => {
 
     const handleApi = async () => {
       try {
-        const response = await axios.post("http://localhost:3000/chat", {
-          query: messages,
-        });
+        const response = await axios.post("https://n8n.mintrix.in/webhook/9ba11544-5c4e-4f91-818a-08a4ecb596c5", [{
+          sessionId: "b1cc5e2e6eb4f97990e46a568f4d481",
+          action: "sendMessage",
+          chatInput: messages,
+        }],
+        {
+          headers: {
+            Authorization: `Basic ${credentials}`, // Set Auth Header
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-        const result = response.data;
+        const result = response.data.output;
 
-        setTimeout(() => {
+        
           setMessage((prev) => [...prev, { sender: "AI", text: result }]);
           setLoading(false);
-        }, 100); 
+     
       } catch (error) {
         console.error("API error:", error);
         setMessage((prev) => [...prev, { sender: "AI", text: "Hello ! How can i help You ?  " }]);

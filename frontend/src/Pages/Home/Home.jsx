@@ -12,7 +12,7 @@ import FlowDiagram from "../../components/Home/Journey/FlowDiagram.jsx";
 
 const Home = () => {
   return (
-    <div className="bg-[#09090b]">
+    <div className="bg-[#09090b] w-full ">
       <Navbar />
       <HeroSection />
       <BentoGrid />

@@ -11,11 +11,11 @@ export default function Main() {
           <div className="flex w-[452px] pt-[32px] pr-0 pb-0 pl-0 flex-col gap-[16px] items-center shrink-0 flex-nowrap relative z-[33]">
             <div className="flex w-[133px] gap-[4px] items-center shrink-0 flex-nowrap relative z-[34]">
               <div className="w-[26px] h-[20px] shrink-0 bg-[url(../assets/images/12d6eb78-c993-448c-b784-b91cdf8a5148.png)] bg-cover bg-no-repeat relative z-[35]" />
-              <span className="flex w-[103px] h-[28px] justify-end items-end shrink-0 basis-auto font-['Plus_Jakarta_Sans'] text-[20px] font-bold leading-[28px] text-[#faf9ff] relative text-right whitespace-nowrap z-[36]">
+              <span className="flex w-[103px] h-[28px] justify-end items-end shrink-0 basis-auto font-['Poppins'] text-[20px] font-bold leading-[28px] text-[#faf9ff] relative text-right whitespace-nowrap z-[36]">
                 Mintrix Ai
               </span>
             </div>
-            <span className="flex w-[452px] h-[124px] justify-center items-start self-stretch shrink-0 font-['Plus_Jakarta_Sans'] text-[62px] font-semibold leading-[62px] text-[#faf9ff] tracking-[-1.24px] relative text-center z-[37]">
+            <span className="flex w-[452px] h-[124px] justify-center items-start self-stretch shrink-0 font-['Poppins'] text-[62px] font-semibold leading-[62px] text-[#faf9ff] tracking-[-1.24px] relative text-center z-[37]">
               AI-Quipping Schools Today
             </span>
           </div>
@@ -37,10 +37,10 @@ export default function Main() {
               <div className="w-[32px] h-[32px] shrink-0 bg-[url(../assets/images/87f01d33-71fc-4edb-a787-e9cf6eaea8a8.png)] bg-cover bg-no-repeat relative overflow-hidden z-[8]" />
             </div>
             <div className="flex flex-col gap-[4px] items-start self-stretch shrink-0 flex-nowrap relative z-[9]">
-              <span className="h-[28px] self-stretch shrink-0 basis-auto font-['Plus_Jakarta_Sans'] text-[18px] font-bold leading-[28px] text-[#e6e3ff] relative text-left whitespace-nowrap z-10">
+              <span className="h-[28px] self-stretch shrink-0 basis-auto font-['Poppins'] text-[18px] font-bold leading-[28px] text-[#e6e3ff] relative text-left whitespace-nowrap z-10">
                 Automations
               </span>
-              <span className="flex w-[200px] h-[48px] justify-start items-end self-stretch shrink-0 font-['Plus_Jakarta_Sans'] text-[16px] font-normal leading-[24px] text-[#ac9fe4] relative text-left z-[11]">
+              <span className="flex w-[200px] h-[48px] justify-start items-end self-stretch shrink-0 font-['Poppins'] text-[16px] font-normal leading-[24px] text-[#ac9fe4] relative text-left z-[11]">
                 Explore multiple prompt directions with branching.
               </span>
             </div>
@@ -58,10 +58,10 @@ export default function Main() {
               </div>
             </div>
             <div className="flex flex-col gap-[4px] items-start self-stretch shrink-0 flex-nowrap relative z-[22]">
-              <span className="h-[28px] self-stretch shrink-0 basis-auto font-['Plus_Jakarta_Sans'] text-[18px] font-bold leading-[28px] text-[#e6e3ff] relative text-left whitespace-nowrap z-[23]">
+              <span className="h-[28px] self-stretch shrink-0 basis-auto font-['Poppins'] text-[18px] font-bold leading-[28px] text-[#e6e3ff] relative text-left whitespace-nowrap z-[23]">
                 Chatbots
               </span>
-              <span className="flex w-[200px] h-[48px] justify-start items-end self-stretch shrink-0 font-['Plus_Jakarta_Sans'] text-[16px] font-normal leading-[24px] text-[#ac9fe4] relative text-left z-[24]">
+              <span className="flex w-[200px] h-[48px] justify-start items-end self-stretch shrink-0 font-['Poppins'] text-[16px] font-normal leading-[24px] text-[#ac9fe4] relative text-left z-[24]">
                 Boost your prompt precision with keywords.
               </span>
             </div>

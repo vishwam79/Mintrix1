@@ -12,20 +12,19 @@ const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 4,
-    slidesToSlide: 1,
+    slidesToSlide: 1 // optional, default to 1.
   },
   tablet: {
-    breakpoint: { max: 1024, min: 600 },
-    items: 2.4,
-    slidesToSlide: 1,
+    breakpoint: { max: 1024, min: 768 },
+    items: 3,
+    slidesToSlide: 1 // optional, default to 1.
   },
   mobile: {
-    breakpoint: { max: 600, min: 0 }, // Proper mobile range
-    items: 1.2,
-    slidesToSlide: 1,
-  },
+    breakpoint: { max: 767, min: 464 },
+    items: 2,
+    slidesToSlide: 1 // optional, default to 1.
+  }
 };
-
 
 
 const CustomLeftArrow = ({ onClick }) => (
@@ -83,7 +82,7 @@ const Step = () => {
               {/* Front Side */}
               <div 
                 onMouseEnter={() => hoverHandle(index)}  
-                className="slider snap-center card-front object-contain  w-[300px] h-[400px] rounded-md flex justify-start items-end hover:transform hover:transition-transform hover:duration-300 "
+                className="slider snap-center card-front object-contain  w-[300px] h-[400px] rounded-md flex justify-start items-end hover:transform hover:transition-transform hover:duration-300 ml-4 "
                 style={{ backgroundImage: `url(${imageUrl.url})` }}
               >
                 <h1 className="px-5 text-xl font-bold text-white">

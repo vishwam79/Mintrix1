@@ -20,9 +20,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="flex justify-center ">
-      <nav className=" rounded-lg shadow-lg fixed w-full z-10  max-w-[1440px] ">
-        <div className="flex justify-between items-center mx-auto  backdrop-blur-md bg-opacity-50 bg-gray-800 py-3 px-6">
+    <div className="flex justify-center w-full ">
+      <nav className=" rounded-lg shadow-lg fixed w-full z-10  w-full ">
+
+
+        <div className="  backdrop-blur-md bg-opacity-50 bg-gray-800 py-3 px-6">
+<div className="max-w-[1440px] flex justify-between items-center mx-auto  ">
+
+         
           {/* Mobile Menu and Logo */}
           <div className="flex items-center gap-4">
             <MdOutlineMenu
@@ -68,6 +73,13 @@ const Navbar = () => {
               Get started for FREE <MdArrowOutward />
             </button>
           </a>
+       
+       
+       
+       
+       
+        </div>
+
         </div>
 
         {/* Mobile Nav */}
@@ -89,8 +101,8 @@ const Navbar = () => {
             <div className="flex flex-col md:flex-row items-center justify-center gap-4">
               <div className="flex justify-between gap-4">
                 <TbBus className="text-yellow-400 text-xl" />
-                <p className="text-white text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                <p className="text-white text-[14px]">
+                Try Mintrix's latest and smartest model o1
                 </p>
 
                 <RxCross2

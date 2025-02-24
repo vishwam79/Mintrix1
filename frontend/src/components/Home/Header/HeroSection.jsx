@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
 
     <div className="flex justify-center">
-    <div className="relative w-full max-w-[1440px] h-screen ">
+    <div className="relative w-full  h-screen ">
       <div className="relative max-h-screen">
         <video
           autoPlay

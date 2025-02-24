@@ -135,13 +135,13 @@ const Index = () => {
              
 
                 <div className="w-[100px] h-[35px] flex items-center justify-center bg-[rgba(98,106,181,0.21)] rounded-md border-[2px] border-violet-600 -rotate-30  ml-16 mt-3 ">
-                  <span className="font-['Plus_Jakarta_Sans'] text-[15px] font-medium text-[#e9e5ff] ">
+                  <span className="font-['Poppins'] text-[15px] font-medium text-[#e9e5ff] ">
                     Apply Leave
                   </span>
                 </div>
 
                 <div className="w-[100px] h-[35px]  flex items-center justify-center bg-[rgba(98,106,181,0.21)] rounded-md border-[2px] border-violet-600  -rotate-30 mt-10 ml-10">
-                  <span className="font-['Plus_Jakarta_Sans'] text-[15px] font-medium text-[#e9e5ff] ">
+                  <span className="font-['Poppins'] text-[15px] font-medium text-[#e9e5ff] ">
                   Schedule
                   </span>
                 </div>
@@ -172,7 +172,7 @@ const Index = () => {
                   className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 p-1 rounded-full -mt-10 -ml-2"
                 />
 <div className="w-[100px] h-[35px]  flex items-center justify-center bg-[rgba(98,106,181,0.21)] rounded-md border-[2px] border-violet-600 rotate-20  mt-10 ml-10">
-                  <span className="font-['Plus_Jakarta_Sans'] text-[15px] font-medium text-[#e9e5ff] ">
+                  <span className="font-['Poppins'] text-[15px] font-medium text-[#e9e5ff] ">
                   Collaborate
                   </span>
                 </div>

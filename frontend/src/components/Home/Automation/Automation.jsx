@@ -10,17 +10,17 @@ import { MdArrowOutward } from "react-icons/md";
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 3000, min: 0 },
     items: 4,
     slidesToSlide: 1,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 600 },
+    breakpoint: { max: 1024, min: 0 },
     items: 3,
     slidesToSlide: 1,
   },
   mobile: {
-    breakpoint: { max: 600, min: 400 }, // Proper mobile range
+    breakpoint: { max: 600, min: 0 }, // Proper mobile range
     items: 1.2,
     slidesToSlide: 1,
   },
@@ -69,7 +69,7 @@ const Automation = () => {
           draggable={true}
           showDots={false}
           infinite={true}
-          partialVisible={false}
+          partialVisible={true}
           arrows={false}
         >
           {Data.map((imageUrl, index) => (

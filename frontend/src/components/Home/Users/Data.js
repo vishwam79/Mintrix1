@@ -1,7 +1,7 @@
 export const Data = [
     {
       id: 1,
-      url: "/Users/forteacher.jpeg",
+      url: "/Users/forteacher.png",
       title: "For Teachers",
       headline: "Teaching Made Effortless with MINTRIX",
       subheadline: "Focus on your students, not on the paperwork.",
